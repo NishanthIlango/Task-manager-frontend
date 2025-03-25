@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Task Management Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend implementation for Task Management application. The frontend is built using **React 19**, **TypeScript**, and **Ant Design** to provide a user-friendly interface for managing tasks.
 
-## Available Scripts
+## Features
+- Create, search, and delete tasks
+- Execute tasks and view command output
+- Responsive and accessible UI
+- Integration with the backend API
 
-In the project directory, you can run:
+## Tech Stack
+- **React 19**
+- **TypeScript**
+- **Ant Design**
+- **Axios** (for API requests)
 
-### `npm start`
+## Installation and Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn installed
+- Backend service running (Task 1)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Steps to Run the Frontend
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/NishanthIlango/Task-manager-frontend.git
+   cd frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Configure the backend API URL:
+   - Create a `.env` file in the root directory.
+   - Add the following line:
+     ```env
+     VITE_API_BASE_URL=http://localhost:9000
+     ```
+4. Start the application:
+   ```sh
+   npm run dev
+   ```
+5. Open `http://localhost:3000` in your browser.
 
-### `npm test`
+## API Integration
+The frontend interacts with the backend using the following API endpoints:
+- **GET** `/tasks` - Fetch all tasks
+- **POST** `/tasks` - Create a task
+- **DELETE** `/tasks/{id}` - Delete a task
+- **POST** `/tasks/{id}/execute` - Execute a task
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Uploading Screenshots
+To document your progress:
+1. Capture UI screenshots showing features like task creation, execution, and deletion.
+2. Save them in the `screenshots/` directory.
+3. Reference them in this README:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ## Screenshots
+   - Task List View: ![Task List](output/view_task.png)
+   - Create Task List: ![Create Task](output/create_task.png)
+   - Task Execution: ![Task Execution](output/view_taskexecution.png)
+---
